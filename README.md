@@ -8,8 +8,8 @@ Following are the apis endpoints-
 2. Get All User List "/api/users" -  <br />
    This is GET request to get the list of "Users".  <br />
 
-3. Create User "api/users/create" -
-   This is POST request and in this we have to pass the following JSON data in body.
+3. Create User "api/users/create" -  <br />
+   This is POST request and in this we have to pass the following JSON data in body.  <br />
    {
     "username": "xxx",
     "last_name":"xxx",
@@ -17,16 +17,16 @@ Following are the apis endpoints-
     "mobile_number":"98xxxxxxxx",
     "status":"true",
     "password":"passxxxd"
-  }
+  }  <br />
 
-4. GetUserById "api/users/getById/{id}" -
-   This is GET request to get the user by its "id".
+4. GetUserById "api/users/getById/{id}" -  <br />
+   This is GET request to get the user by its "id".  <br />
 
-5. Delete User "api/users/deleteById/{id}" -
-   This is POST request to delete the user by its "id".
+5. Delete User "api/users/deleteById/{id}" -  <br />
+   This is POST request to delete the user by its "id".  <br />
 
-6. UpdateById "/api/users/updateById/{id}" -
-   This is PUT request and in this we have to pass the following JSON data in body.
+6. UpdateById "/api/users/updateById/{id}" -  <br />
+   This is PUT request and in this we have to pass the following JSON data in body. <br />
    {
     "username": "xxx",
     "last_name":"xxx",
@@ -34,5 +34,5 @@ Following are the apis endpoints-
     "mobile_number":"98xxxxxxxx",
     "status":"true",
     "password":"passxxxd"
-  }
+  } <br />
    
