@@ -12,7 +12,7 @@ In this project for Database we have used Postgres.<br />
 Please change/modify the "application.properties" as per your Database configuration. <br />
 
 
-Following are the apis endpoints- 
+# Following are the apis endpoints- 
 1. Login endpoint "/api/users/login" -  <br />
    This is a POST request and in this we have to pass "username" and "password" and in respose we get JWT token.  <br />
 
