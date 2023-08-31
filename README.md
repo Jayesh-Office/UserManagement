@@ -10,13 +10,13 @@ Following are the apis endpoints-
 
 3. Create User "api/users/create" -  <br />
    This is POST request and in this we have to pass the following JSON data in body.  <br />
-   {
-    "username": "xxx",
-    "last_name":"xxx",
-    "email":"xxx@gmail1.com",
-    "mobile_number":"98xxxxxxxx",
-    "status":"true",
-    "password":"passxxxd"
+   { <br />
+    "username": "xxx", <br />
+    "last_name":"xxx", <br />
+    "email":"xxx@gmail1.com", <br />
+    "mobile_number":"98xxxxxxxx", <br />
+    "status":"true", <br />
+    "password":"passxxxd" <br />
   }  <br />
 
 4. GetUserById "api/users/getById/{id}" -  <br />
@@ -27,12 +27,12 @@ Following are the apis endpoints-
 
 6. UpdateById "/api/users/updateById/{id}" -  <br />
    This is PUT request and in this we have to pass the following JSON data in body. <br />
-   {
-    "username": "xxx",
-    "last_name":"xxx",
-    "email":"xxx@gmail1.com",
-    "mobile_number":"98xxxxxxxx",
-    "status":"true",
-    "password":"passxxxd"
+   { <br />
+    "username": "xxx", <br />
+    "last_name":"xxx", <br />
+    "email":"xxx@gmail1.com", <br />
+    "mobile_number":"98xxxxxxxx", <br />
+    "status":"true", <br />
+    "password":"passxxxd" <br />
   } <br />
    
