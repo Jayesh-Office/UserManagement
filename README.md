@@ -2,11 +2,11 @@
 This is user management springboot application.
 
 Following are the apis endpoints- 
-1. Login endpoint "/api/users/login" -
-   This is a POST request and in this we have to pass "username" and "password" and in respose we get JWT token.
+1. Login endpoint "/api/users/login" -  <br />
+   This is a POST request and in this we have to pass "username" and "password" and in respose we get JWT token.  <br />
 
-2. Get All User List "/api/users" -
-   This is GET request to get the list of "Users".
+2. Get All User List "/api/users" -  <br />
+   This is GET request to get the list of "Users".  <br />
 
 3. Create User "api/users/create" -
    This is POST request and in this we have to pass the following JSON data in body.
