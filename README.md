@@ -2,7 +2,7 @@
 
 # This is user management springboot application.<br />
 
-# To the this Application<br />
+# To Run this Application follow the below steps.<br />
 1. Please download or clone the project.
 2. Open the project in your favourite code editor.
 3. After successfully scanning the index file by code editor please go to UserdetailstestApplication file and Run the file.
@@ -42,4 +42,6 @@ Following are the apis endpoints-
     "status":"true", <br />
     "password":"passxxxd" <br />
   } <br />
+
+  # Thnak you. <br />
    
