@@ -7,9 +7,9 @@
 2. Open the project in your favourite code editor.
 3. After successfully scanning the index file by code editor please go to UserdetailstestApplication file and Run the file.
 
-# Database
-In this project for Database we have used Postgres.
-Please change/modify the "application.properties" as per your Database configuration. 
+# Database<br />
+In this project for Database we have used Postgres.<br />
+Please change/modify the "application.properties" as per your Database configuration. <br />
 
 
 Following are the apis endpoints- 
