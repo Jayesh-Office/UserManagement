@@ -1,6 +1,11 @@
-# UserManagement. <br />
-
 # This is user management springboot application.<br />
+
+# Features <br />
+User-friendly CRUD operations for managing contacts.<br />
+Secure user authentication using Spring Security.<br />
+Utilizes H2 database with Spring Data JPA and Hibernate.<br />
+RESTful API endpoints for interaction.<br />
+Postman collection for testing API endpoints.<br />
 
 # To Run this Application follow the below steps.<br />
 1. Please download or clone the project.
