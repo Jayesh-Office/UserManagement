@@ -52,10 +52,10 @@ Please change/modify the "application.properties" as per your Database configura
     "password":"passxxxd" <br />
   } <br />
 
-#About
+
+# About <br />
 This project aims to showcase the implementation of a simple CRUD application using Spring Boot. It's a great starting point for learning how to build similar applications and understand the integration of Spring Security and database operations.<br />
 
 Feel free to contribute, open issues, or suggest improvements! Your feedback is highly appreciated.<br />
-
-  # Thnak you. <br />
+# Thnak you. <br />
    
