@@ -1,6 +1,8 @@
 package com.example.userdetailstest.controller;
 
 import com.example.userdetailstest.entity.User;
+import com.example.userdetailstest.exception.UserAlreadyExistsException;
+import com.example.userdetailstest.exception.UserNotFoundException;
 import com.example.userdetailstest.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -155,4 +157,70 @@ public class UserControllerTest {
         // Verify that the response status is OK (200)
         result.andExpect(status().isOk());
     }
+    @Test
+    public void testUserNotFoundException() throws Exception {
+        // Configure the UserService mock to throw a UserNotFoundException
+        when(userService.getUserById(1L)).thenThrow(new UserNotFoundException("User not found"));
+
+        // Perform a GET request to retrieve the user by ID
+        ResultActions result = mockMvc.perform(get("/api/users/1")
+                .contentType(MediaType.APPLICATION_JSON));
+
+        // Verify that the response status is NOT_FOUND (404)
+        result.andExpect(status().isNotFound());
+
+        // Verify that the JSON response contains the expected error message
+        result.andExpect(jsonPath("$.message").value("User not found"));
+    }
+    @Test
+    public void testInternalServerError() throws Exception {
+        // Configure the UserService mock to throw a RuntimeException (simulating an internal server error)
+        when(userService.getUserById(1L)).thenThrow(new RuntimeException("Internal server error"));
+
+        // Perform a GET request to retrieve the user by ID
+        ResultActions result = mockMvc.perform(get("/api/users/1")
+                .contentType(MediaType.APPLICATION_JSON));
+
+        // Verify that the response status is INTERNAL_SERVER_ERROR (500)
+        result.andExpect(status().isInternalServerError());
+
+        // Verify that the JSON response contains the expected error message
+        result.andExpect(jsonPath("$.message").value("Internal server error"));
+    }
+    @Test
+    public void testUserAlreadyExists() throws Exception {
+        // Create a user object to be used in the request
+        User newUser = new User();
+        newUser.setUsername("existingUser");
+        newUser.setLast_name("Doe");
+        newUser.setEmail("Doe@gmail.com");
+        newUser.setMobile_number("9878578752");
+        newUser.setStatus("true");
+        newUser.setPassword("adasdsa");
+
+        // Configure the UserService mock to throw a UserAlreadyExistsException when createUser is called
+        when(userService.createUser(newUser)).thenThrow(new UserAlreadyExistsException("User already exists"));
+
+        // Perform a POST request to create the user
+        ResultActions result = mockMvc.perform(post("/api/users/create")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(asJsonString(newUser))); // Convert the user object to JSON
+
+        // Verify that the response status is CONFLICT (409)
+        result.andExpect(status().isConflict());
+
+        // Verify that the JSON response contains the expected error message
+        result.andExpect(jsonPath("$.message").value("User already exists"));
+    }
+
+    // Utility method to convert an object to JSON string
+    private static String asJsonString(final Object obj) {
+        try {
+            final ObjectMapper mapper = new ObjectMapper();
+            return mapper.writeValueAsString(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
